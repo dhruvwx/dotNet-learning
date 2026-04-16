@@ -55,7 +55,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24Methods", "24Methods\24Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25Homework", "24Homework\25Homework.csproj", "{153007E4-5ECD-4F84-B2C0-E2CDBCDF1109}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26MiniProject2", "26MiniProject2\26MiniProject2.csproj", "{23BEB4A7-5D4E-4DE3-9610-FEA00EDE0456}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "26MiniProject2(guestbook)", "26MiniProject2\26MiniProject2(guestbook).csproj", "{23BEB4A7-5D4E-4DE3-9610-FEA00EDE0456}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27Debugging&Homeworks", "27Debugging&Homeworks\27Debugging&Homeworks.csproj", "{0E7D321B-867D-4DFF-B1D2-688A826290DF}"
 EndProject
@@ -66,6 +66,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "30InstantiatedClasses", "30InstantiatedClasses\30InstantiatedClasses.csproj", "{A9A99F9A-1F63-4292-A1AA-8E53C94397FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "31HomeWork", "31HomeWork\31HomeWork.csproj", "{98A88612-2B08-41F4-96EF-28559EA4FCFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "32PropertyTypes-HomeWork", "32HomeWork\32PropertyTypes-HomeWork.csproj", "{DE847B6B-DD20-4BAD-8D70-36C67D7F5AD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "33CosoleUI(for class lib.)", "33CosoleUI(for class lib.)\33CosoleUI(for class lib.).csproj", "{2D8740BE-1167-4ECD-B1E3-4B6A7A687E32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "34Demo-ClassLibrary", "34Demo-ClassLibrary\34Demo-ClassLibrary.csproj", "{30DE7845-3FFD-414D-B3CF-AD26EF6EAE07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +207,18 @@ Global
 		{98A88612-2B08-41F4-96EF-28559EA4FCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A88612-2B08-41F4-96EF-28559EA4FCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98A88612-2B08-41F4-96EF-28559EA4FCFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE847B6B-DD20-4BAD-8D70-36C67D7F5AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE847B6B-DD20-4BAD-8D70-36C67D7F5AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE847B6B-DD20-4BAD-8D70-36C67D7F5AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE847B6B-DD20-4BAD-8D70-36C67D7F5AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8740BE-1167-4ECD-B1E3-4B6A7A687E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8740BE-1167-4ECD-B1E3-4B6A7A687E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8740BE-1167-4ECD-B1E3-4B6A7A687E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8740BE-1167-4ECD-B1E3-4B6A7A687E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30DE7845-3FFD-414D-B3CF-AD26EF6EAE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30DE7845-3FFD-414D-B3CF-AD26EF6EAE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30DE7845-3FFD-414D-B3CF-AD26EF6EAE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DE7845-3FFD-414D-B3CF-AD26EF6EAE07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
