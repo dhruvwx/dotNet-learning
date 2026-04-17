@@ -11,6 +11,8 @@ do
 
     Console.Write("enter your first name or type stop to exit:   ");
     // person.FirstName = Console.ReadLine(); -- wrong coz assigning before checking.
+
+
    string name = Console.ReadLine();
     if (name.ToLower() == "stop")
     {
