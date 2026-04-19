@@ -14,7 +14,9 @@ Console.WriteLine(todayGlobal.ToString("GLOBAL - dd,MM,yyyy,hh:mm tt, zzz"));
 
 Console.WriteLine();
 Console.WriteLine("our choice date".ToUpper());
+
 //Parse used to tell our choice date
+
 DateTime birthday = DateTime.Parse("13/11/2004");
 Console.WriteLine(birthday.ToString("LOCAL - MMMM"));
 

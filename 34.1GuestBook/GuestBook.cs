@@ -17,7 +17,7 @@ namespace _GuestBook
         {
             get
             {
-                string fullname = $"hi my name is {FirstName} {LastName} i am {Age} years old i wanted to say:\n{Msg}";
+                string fullname = $"hi my name is {FirstName} {LastName}  i am {Age} years old i wanted to say: \n {Msg}";
                 return fullname;
             }
 
