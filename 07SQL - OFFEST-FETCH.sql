@@ -1,0 +1,18 @@
+USE sql_store;
+
+SELECT TOP 5 * --SHOWS TOP 5 ROWS
+FROM customers
+ORDER BY points;
+
+
+SELECT *
+FROM customers
+ORDER BY points
+OFFSET 5 ROWS--SHOWS ROWS AFTER FIRST 5
+FETCH NEXT 5 ROWS ONLY
+
+--HW GET TOP 3 LOYAL CUSTOMERS BY POINTS
+SELECT TOP 3 *
+FROM CUSTOMERS
+ORDER BY points DESC; --DESC coz points are in increasing order
+
