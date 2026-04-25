@@ -16,4 +16,3 @@ namespace _35._0_BattleshipLibrary.Models
         public GridSpotStatus Status { get; set; } = GridSpotStatus.Empty; //by default spot is empty.
     } 
 }
- 

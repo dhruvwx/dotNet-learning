@@ -10,9 +10,9 @@ namespace _35._0_BattleshipLibrary.Models
     {
         public string Name { get; set; }
 
-        public List<GridSpotModel> ShipLocations { get; set; } //will have loc of 5 ships 
+        public List<GridSpotModel> ShipLocations { get; set; } = new List<GridSpotModel>();//will have loc of 5 ships 
 
-        public List<GridSpotModel> AllLocations { get; set; } //all loc of grid , at start all empty 
+        public List<GridSpotModel> AllLocations { get; set; } = new List<GridSpotModel>();//all loc of grid , at start all empty 
 
 
     }

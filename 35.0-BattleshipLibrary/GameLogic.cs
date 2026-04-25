@@ -37,6 +37,11 @@ namespace _35._0_BattleshipLibrary
             }
         }
 
+        public static bool ShipPlacement(PlayerInfoModel shipLoc, string? location)
+        {
+            throw new NotImplementedException();
+        }
+
         private static void Spots(PlayerInfoModel model , string letter , int number)
         {
             GridSpotModel spot = new();

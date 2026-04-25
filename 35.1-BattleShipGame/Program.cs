@@ -6,4 +6,5 @@ using _35._0_BattleshipLibrary.Models;
 
 PlayerInfoModel players = new();
 
-players.Name = Entername();
+
+GameUI.EntireLogic();
