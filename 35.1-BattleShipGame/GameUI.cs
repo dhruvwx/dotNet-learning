@@ -8,47 +8,71 @@ using System.Threading.Tasks;
 
 namespace _35._1_BattleShipGame
 {
-   public  class GameUI
+    public class GameUI
     {
-        public static void EntireLogic()
+
+        public static void RecordShot(PlayerInfoModel activePlayer, PlayerInfoModel opponent)
         {
-            WelcomeMsg();
-
-            PlayerInfoModel activePlayer = PlayerInfo("PLAYER 1");
-
-            PlayerInfoModel opponent = PlayerInfo("PLAYER 2");
-
-            PlayerInfoModel winner = null; //either player will be placed at winner 
-
-            //do loop to determine the winner
+            bool isShotValid;
+            string row; int column;
             do
             {
-                //diplay grid
-                DisplayGrid(activePlayer);
+                string shotTaken = AskForShot();
+
+                //divide shotTaken into rows and columns to know where is shot taken , two values use tuple
+                (row, column) = GameLogic.SplitShotIntoRowsAndColumns(shotTaken);
+
+                isShotValid = GameLogic.IsShotValid(activePlayer, row, column); //activePlayer is as parameter to know where he has already shot.
+                if (!isShotValid)
+                {
+                    Console.WriteLine("Please try again , this shot does not exist! ");
+                }
+            } while (!isShotValid);
+
+            //if valid now we will se if its hit or miss.
+
+            bool isHit = GameLogic.IsHit(opponent, row, column);
+
+            GameLogic.StoreResult(activePlayer, row, column, isHit);
 
 
-                
-            }
-            while (true);
         }
 
-        private static void DisplayGrid(PlayerInfoModel activePlayer)
+        private static string AskForShot()
+        {
+            Console.Write("Where do u want to shoot: ");
+            string output = Console.ReadLine();
+            return output;
+        }
+
+        public static void DisplayGrid(PlayerInfoModel activePlayer)
         {
             string currentGrid = activePlayer.AllLocations[0].SpotLetter;
 
             foreach (var gridSpot in activePlayer.AllLocations)
             {
-                if(currentGrid != gridSpot.SpotLetter)
+                if (currentGrid != gridSpot.SpotLetter)
                 {
                     Console.WriteLine();//move to next line when the spotLetter changes for grid view
                     currentGrid = gridSpot.SpotLetter;
                 }
-                if(gridSpot.Status == GridSpotStatus.Empty)
+                if (gridSpot.Status == GridSpotStatus.Empty)
                 {
-                    Console.Write($"{gridSpot.SpotLetter} {gridSpot.SpotNumber}");
+                    Console.Write($"{ gridSpot.SpotLetter }{ gridSpot.SpotNumber } ");
                 }
-                
-            }            
+                else if (gridSpot.Status == GridSpotStatus.Miss)
+                {
+                    Console.Write(" O ");
+                }
+                else if (gridSpot.Status == GridSpotStatus.Hit)
+                {
+                    Console.Write(" X ");
+                }
+                else
+                {
+                    Console.Write(" ? ");
+                }
+            }
         }
 
         public static PlayerInfoModel PlayerInfo(string players)
@@ -65,8 +89,12 @@ namespace _35._1_BattleShipGame
             //add 5 ships
             PlaceShips(player);
 
+            Console.Clear(); 
+
             return player;
+
            
+
 
         }
 
@@ -84,7 +112,7 @@ namespace _35._1_BattleShipGame
             return output;
         }
 
-         public static void PlaceShips(PlayerInfoModel shipLoc)
+        public static void PlaceShips(PlayerInfoModel shipLoc)
         {
             do
             {
@@ -93,13 +121,20 @@ namespace _35._1_BattleShipGame
 
                 //if wrong loc 
                 bool valid = GameLogic.ShipPlacement(shipLoc, location);
-                if(valid == false)
+                if (valid == false)
                 {
                     Console.WriteLine("ENTER A CORRECT LOCATION TO PLACE THE SHIP");
                 }
 
 
+
             } while (shipLoc.ShipLocations.Count < 5);
+        }
+
+        internal static void DisplayWinner(PlayerInfoModel winner)
+        {
+            Console.WriteLine($"~~~CONGRATULATIONS {winner.Name.ToUpper()}~~~");
+            Console.WriteLine(value: $"{winner.Name} IS THE WINNER WITH {GameLogic.NumberOfShotsTaken(winner)} NUMBER OF SHOTS");
         }
     }
 }
