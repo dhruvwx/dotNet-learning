@@ -2,6 +2,7 @@
 using _35._0_BattleshipLibrary.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,19 +14,30 @@ namespace _35._1_BattleShipGame
 
         public static void RecordShot(PlayerInfoModel activePlayer, PlayerInfoModel opponent)
         {
-            bool isShotValid;
-            string row; int column;
+            bool isShotValid = true;
+            string row = ""; int column = 0;
             do
             {
-                string shotTaken = AskForShot();
+
+                string shotTaken = AskForShot(activePlayer);
 
                 //divide shotTaken into rows and columns to know where is shot taken , two values use tuple
-                (row, column) = GameLogic.SplitShotIntoRowsAndColumns(shotTaken);
-
-                isShotValid = GameLogic.IsShotValid(activePlayer, row, column); //activePlayer is as parameter to know where he has already shot.
+                //activePlayer is as parameter to know where he has already shot.
+                //below only expects entry in A1 this format so we need try catch
+                try
+                {
+                    (row, column) = GameLogic.SplitShotIntoRowsAndColumns(shotTaken);
+                    isShotValid = GameLogic.IsShotValid(activePlayer, row, column);
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("Make sure the format of your shot is correct");
+                }
+                
                 if (!isShotValid)
                 {
                     Console.WriteLine("Please try again , this shot does not exist! ");
+                    Console.WriteLine();
                 }
             } while (!isShotValid);
 
@@ -35,12 +47,26 @@ namespace _35._1_BattleShipGame
 
             GameLogic.StoreResult(activePlayer, row, column, isHit);
 
+            if (isHit)//if is hit true that means ship is hit
+            {
+                Console.WriteLine();
+                Console.WriteLine("its a Hit!");
+               
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("its a Miss!");
+
+            }
+
+
 
         }
 
-        private static string AskForShot()
+        private static string AskForShot(PlayerInfoModel player)
         {
-            Console.Write("Where do u want to shoot: ");
+            Console.Write($"{player.Name} take your turn , where do u want to shoot: ");
             string output = Console.ReadLine();
             return output;
         }
@@ -49,6 +75,7 @@ namespace _35._1_BattleShipGame
         {
             string currentGrid = activePlayer.AllLocations[0].SpotLetter;
 
+            Console.WriteLine();
             foreach (var gridSpot in activePlayer.AllLocations)
             {
                 if (currentGrid != gridSpot.SpotLetter)
@@ -58,7 +85,7 @@ namespace _35._1_BattleShipGame
                 }
                 if (gridSpot.Status == GridSpotStatus.Empty)
                 {
-                    Console.Write($"{ gridSpot.SpotLetter }{ gridSpot.SpotNumber } ");
+                    Console.Write($"{gridSpot.SpotLetter}{gridSpot.SpotNumber} ");
                 }
                 else if (gridSpot.Status == GridSpotStatus.Miss)
                 {
@@ -72,7 +99,11 @@ namespace _35._1_BattleShipGame
                 {
                     Console.Write(" ? ");
                 }
+
+                
             }
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         public static PlayerInfoModel PlayerInfo(string players)
@@ -89,11 +120,11 @@ namespace _35._1_BattleShipGame
             //add 5 ships
             PlaceShips(player);
 
-            Console.Clear(); 
+            Console.Clear();
 
             return player;
 
-           
+
 
 
         }
@@ -120,7 +151,16 @@ namespace _35._1_BattleShipGame
                 string location = Console.ReadLine();
 
                 //if wrong loc 
-                bool valid = GameLogic.ShipPlacement(shipLoc, location);
+                bool valid = false;
+                try
+                {
+                    valid = GameLogic.ShipPlacement(shipLoc, location);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+               
                 if (valid == false)
                 {
                     Console.WriteLine("ENTER A CORRECT LOCATION TO PLACE THE SHIP");
@@ -133,6 +173,8 @@ namespace _35._1_BattleShipGame
 
         internal static void DisplayWinner(PlayerInfoModel winner)
         {
+            Console.Clear();
+            Console.WriteLine("__________________________________________________________________________________________________");
             Console.WriteLine($"~~~CONGRATULATIONS {winner.Name.ToUpper()}~~~");
             Console.WriteLine(value: $"{winner.Name} IS THE WINNER WITH {GameLogic.NumberOfShotsTaken(winner)} NUMBER OF SHOTS");
         }

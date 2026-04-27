@@ -100,7 +100,7 @@ namespace _35._0_BattleshipLibrary
             {
                 GridSpotModel newObject = new GridSpotModel();
 
-                newObject.SpotLetter = row;
+                newObject.SpotLetter = row.ToUpper();
                 newObject.SpotNumber = column;
                 newObject.Status = GridSpotStatus.Ship;
 
@@ -185,6 +185,8 @@ namespace _35._0_BattleshipLibrary
                 if (shipLoc.SpotLetter == row.ToUpper() && shipLoc.SpotNumber == column)
                 {
                     isValidShot = true;
+                    // mark ship as sunk
+                    shipLoc.Status = GridSpotStatus.Sunk;
                 }
             }
             return isValidShot;
@@ -202,7 +204,7 @@ namespace _35._0_BattleshipLibrary
                         spot.Status = GridSpotStatus.Hit;
                     }
                     else
-                    {
+                    {  
                         spot.Status = GridSpotStatus.Miss;
                     }
                 }
