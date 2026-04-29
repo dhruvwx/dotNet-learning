@@ -81,9 +81,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35.0-BattleshipLibrary", "3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35.1-BattleShipGame", "35.1-BattleShipGame\35.1-BattleShipGame.csproj", "{9080C12A-33C0-4F82-A369-1FD1C39BFA5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36Inheritance", "36Inheritance\36Inheritance.csproj", "{488D0610-EAF9-44B7-96B8-E7BBDF73D541}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "37Inheritance-Interfaces(Inventory-MiniProj)", "36Inheritance\37Inheritance-Interfaces(Inventory-MiniProj).csproj", "{488D0610-EAF9-44B7-96B8-E7BBDF73D541}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "37Interfaces", "37Interfaces\37Interfaces.csproj", "{00ED777A-1832-40B1-BA10-3FE0D096578E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36Interfaces", "37Interfaces\36Interfaces.csproj", "{00ED777A-1832-40B1-BA10-3FE0D096578E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

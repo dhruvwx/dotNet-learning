@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _37Interfaces
+namespace _36Interfaces
 {
     internal class Person : IRun
     {
