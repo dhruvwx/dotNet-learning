@@ -81,6 +81,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35.0-BattleshipLibrary", "3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35.1-BattleShipGame", "35.1-BattleShipGame\35.1-BattleShipGame.csproj", "{9080C12A-33C0-4F82-A369-1FD1C39BFA5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36Inheritance", "36Inheritance\36Inheritance.csproj", "{488D0610-EAF9-44B7-96B8-E7BBDF73D541}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -243,6 +245,10 @@ Global
 		{9080C12A-33C0-4F82-A369-1FD1C39BFA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9080C12A-33C0-4F82-A369-1FD1C39BFA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9080C12A-33C0-4F82-A369-1FD1C39BFA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{488D0610-EAF9-44B7-96B8-E7BBDF73D541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{488D0610-EAF9-44B7-96B8-E7BBDF73D541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{488D0610-EAF9-44B7-96B8-E7BBDF73D541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{488D0610-EAF9-44B7-96B8-E7BBDF73D541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
