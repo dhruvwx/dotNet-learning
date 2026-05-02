@@ -87,6 +87,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36Interfaces", "37Interface
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "38AbstractClasses", "38AbstractClasses\38AbstractClasses.csproj", "{162AFF2D-EB93-4D1B-BE25-6284DB917702}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "39OverRiding", "39OverRiding\39OverRiding.csproj", "{1EC55369-E8C9-4DE4-9E04-639DF9823218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProj-CardGame", "MiniProj-CardGame\MiniProj-CardGame.csproj", "{CB1D4D13-2F57-4678-AF56-7C28164CFB79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -261,6 +265,14 @@ Global
 		{162AFF2D-EB93-4D1B-BE25-6284DB917702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{162AFF2D-EB93-4D1B-BE25-6284DB917702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{162AFF2D-EB93-4D1B-BE25-6284DB917702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC55369-E8C9-4DE4-9E04-639DF9823218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC55369-E8C9-4DE4-9E04-639DF9823218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC55369-E8C9-4DE4-9E04-639DF9823218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC55369-E8C9-4DE4-9E04-639DF9823218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB1D4D13-2F57-4678-AF56-7C28164CFB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB1D4D13-2F57-4678-AF56-7C28164CFB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB1D4D13-2F57-4678-AF56-7C28164CFB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB1D4D13-2F57-4678-AF56-7C28164CFB79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
