@@ -93,6 +93,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "40MiniProj-CardGame", "Mini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "41MethodOverloading", "41MethodOverloading\41MethodOverloading.csproj", "{F7ADC3DD-99B1-4B32-BD6A-DEF58D487585}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "42MethodExtension", "42MethodExtension\42MethodExtension.csproj", "{3FA1A4B4-019B-467B-AC89-1510AF456E0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "43ExtensionMethod-Overloading-HandsOn", "43ExtensionMethod-Overloading-HandsOn\43ExtensionMethod-Overloading-HandsOn.csproj", "{0B465F0B-50F2-463D-8015-818131F6D8AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -279,6 +283,14 @@ Global
 		{F7ADC3DD-99B1-4B32-BD6A-DEF58D487585}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7ADC3DD-99B1-4B32-BD6A-DEF58D487585}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7ADC3DD-99B1-4B32-BD6A-DEF58D487585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA1A4B4-019B-467B-AC89-1510AF456E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA1A4B4-019B-467B-AC89-1510AF456E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA1A4B4-019B-467B-AC89-1510AF456E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA1A4B4-019B-467B-AC89-1510AF456E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B465F0B-50F2-463D-8015-818131F6D8AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B465F0B-50F2-463D-8015-818131F6D8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B465F0B-50F2-463D-8015-818131F6D8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B465F0B-50F2-463D-8015-818131F6D8AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
