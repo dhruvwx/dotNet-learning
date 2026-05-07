@@ -81,7 +81,6 @@ namespace _46MiniProj
         public string LastName { get; set; }
         public string Email { get; set; }
     }
-
     public class CarModel
     {
         public string Company { get; set; }
