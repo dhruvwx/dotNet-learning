@@ -113,7 +113,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "48.0UnitTestLibrary", "48.0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "49.0CalculationTestingLibrary-HW", "49.0CalculationTesting-HW\49.0CalculationTestingLibrary-HW.csproj", "{95AB116E-76C1-4AF1-9E3E-6DBD0A1F926A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculationsLibrary.Tests", "Calculations.Tests\CalculationsLibrary.Tests.csproj", "{DF460675-A86D-4013-8372-8D1EF3AA2072}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "49.1CalculationsLibrary.Tests", "Calculations.Tests\49.1CalculationsLibrary.Tests.csproj", "{DF460675-A86D-4013-8372-8D1EF3AA2072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "50LinqLamda", "0LinqLamda\50LinqLamda.csproj", "{37720AF7-EF76-4A58-8F7F-D6D959240F5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -345,6 +347,10 @@ Global
 		{DF460675-A86D-4013-8372-8D1EF3AA2072}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF460675-A86D-4013-8372-8D1EF3AA2072}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF460675-A86D-4013-8372-8D1EF3AA2072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37720AF7-EF76-4A58-8F7F-D6D959240F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37720AF7-EF76-4A58-8F7F-D6D959240F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37720AF7-EF76-4A58-8F7F-D6D959240F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37720AF7-EF76-4A58-8F7F-D6D959240F5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
