@@ -3,8 +3,6 @@ using System.Linq;
 using System.Net.Mail;
 
 
-
-
 LambdaTests();
 LinqTests();
 
