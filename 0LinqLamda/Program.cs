@@ -64,9 +64,6 @@ static void LinqTests()
     //foreach (var item in result)
     //{
     //    Console.WriteLine(item.LastName);
-    //}
-
-
 
     //var result = (from c in contactData
     //              join a in addressData
